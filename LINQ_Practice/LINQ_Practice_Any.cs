@@ -51,8 +51,9 @@ namespace LINQ_Practice
         [TestMethod]
         public void AreAnyCohortsBothFullTimeAndNotActive()
         {
-            var doAny = PracticeData/*FILL IN LINQ EXPRESSION*/;
-            Assert.IsTrue(false); //<-- change false to doAny
+
+            var doAny = PracticeData.Any(x => x.Active == false && x.FullTime);/*FILL IN LINQ EXPRESSION*/;
+            Assert.IsTrue(doAny); //<-- change false to doAny
         }
 
         [TestMethod]
